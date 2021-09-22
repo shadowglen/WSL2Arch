@@ -1,0 +1,13 @@
+FROM archlinux:latest
+
+SHELL ["/bin/bash", "-c"]
+
+RUN \
+    sed "/^NoExtract/d" /etc/pacman.conf > /etc/pacman.conf.new && \
+    mv /etc/pacman.conf.new /etc/pacman.conf && \
+    yes | pacman -Syu sudo openssl && \
+    useradd -m -G wheel -s /bin/bash {{USERNAME}} && \
+    echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers && \
+    echo -e "[user]\ndefault={{USERNAME}}" > /etc/wsl.conf
+
+CMD ["/bin/bash"]
