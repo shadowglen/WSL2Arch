@@ -2,8 +2,8 @@
 Build and install Archlinux to WSL2 from Docker image.
 
 ## Prerequisite
-- WSL2
-- Docker Desktop
+- WSL2 (latest version)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ## Usage
 ```powershell
