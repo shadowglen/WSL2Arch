@@ -7,5 +7,5 @@ Build and install Archlinux to WSL2 from Docker image.
 
 ## Usage
 ```powershell
-.\Build.ps1 -DistroName Archlinux -DistroDir D:\WSL2Distros\Arch -Username localuser
+.\Build.ps1 -DistroName Archlinux -DistroDir <Distro name to install Archlinux> -Username <Your user name>
 ```
